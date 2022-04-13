@@ -1,0 +1,85 @@
+.formContainer {
+  width: 600px;
+  background-color: tan;
+  position: absolute;
+  transform: translate(-50%);
+  top: 20%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.formContainer h2 {
+  text-align: center;
+  color: white;
+}
+.forName,
+.forPicture,
+.forPreparation,
+.forIngredients {
+  width: 100%;
+  margin-top: 15px;
+  padding: 5px;
+  display: flex;
+
+  justify-content: space-evenly;
+  align-items: center;
+}
+.forName label,
+.forPicture label,
+.forPreparation label,
+.forIngredients label {
+  width: 30%;
+  color: white;
+  font-size: 1.1rem;
+  margin-right: 10px;
+}
+.forPicture {
+  display: flex;
+
+  width: 100%;
+}
+.forName input,
+.forPicture input {
+  width: 60%;
+  padding: 8px 15px;
+}
+.forPreparation,
+.forIngredients {
+  display: flex;
+  align-items: center;
+}
+textarea {
+  width: 60%;
+  max-width: 60%;
+  min-width: 60%;
+  height: 300px;
+  font-size: 1rem;
+}
+input,
+textarea {
+  border: none;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+}
+.actions {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.actions button {
+  cursor: pointer;
+  border: none;
+  padding: 8px 13px;
+  width: 25%;
+  background-color: rgb(237, 80, 98);
+
+  color: white;
+  font-size: 1.1rem;
+}
+.actions button:hover {
+  background-color: rgb(246, 123, 137);
+}
