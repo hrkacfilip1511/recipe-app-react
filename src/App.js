@@ -1,5 +1,5 @@
 import Layout from "./components/layout/Layout";
-import { Switch, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import AllRecipes from "./pages/AllRecipes";
 import NewRecipe from "./pages/NewRecipe";
 import FavouritesRecipes from "./pages/FavouritesRecipes";

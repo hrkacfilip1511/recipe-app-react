@@ -1,10 +1,22 @@
 import classes from "./RecipeItem.module.css";
 import { FaRegHeart } from "react-icons/fa";
-import { useState } from "react";
+import { useContext } from "react";
+import FavouritesContext from "../../store/favourites-context";
 const RecipeItem = (props) => {
-  const [isFavourite, setFavourite] = useState(false);
+  const favouriteCtx = useContext(FavouritesContext);
+  const recipeIsFavourite = favouriteCtx.itemIsFavourite(props.id);
   const changeFavouriteStatus = () => {
-    setFavourite((prevStatus) => !prevStatus);
+    if (recipeIsFavourite) {
+      favouriteCtx.removeFavourite(props.id);
+    } else {
+      favouriteCtx.addFavourite({
+        id: props.id,
+        title: props.title,
+        image: props.image,
+        ingridient: props.ingridient,
+        preparation: props.preparation,
+      });
+    }
   };
 
   return (
@@ -18,7 +30,7 @@ const RecipeItem = (props) => {
             <FaRegHeart
               className="heart"
               style={{
-                color: `${isFavourite ? "red" : "white"}`,
+                color: `${recipeIsFavourite ? "red" : "white"}`,
               }}
             />
           </button>
@@ -30,7 +42,7 @@ const RecipeItem = (props) => {
       <div className={classes.ingridientsAndPreparation}>
         <div className={classes.ingridients}>
           <span>Ingridients </span>
-          <p>{props.ingridients}</p>
+          <p>{props.ingridient}</p>
         </div>
         <div className={classes.preparation}>
           <span>Preparation </span>

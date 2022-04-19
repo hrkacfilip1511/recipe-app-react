@@ -6,10 +6,11 @@ const Recipes = (props) => {
       <div>
         <RecipeItem
           key={recipe.id}
+          id={recipe.id}
           title={recipe.title}
           image={recipe.image}
           preparation={recipe.preparation}
-          ingridients={recipe.ingridient}
+          ingridient={recipe.ingridient}
         />
       </div>
     );

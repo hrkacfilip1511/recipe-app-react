@@ -1,23 +1,44 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import classes from "./MainNavigation.module.css";
 const MainNavigation = () => {
   return (
     <header className={classes.header}>
       <div className={classes.title}>
-        <Link to="/">
+        <NavLink to="/">
           <h1>All Recipes</h1>
-        </Link>
+        </NavLink>
       </div>
       <nav>
         <ul>
           <li>
-            <Link to="/">All Recipes</Link>
+            <NavLink
+              to="/"
+              style={({ isActive }) =>
+                isActive ? { color: "red" } : { color: "rgb(253, 169, 169)" }
+              }
+            >
+              All Recipes
+            </NavLink>
           </li>
           <li>
-            <Link to="/new-recipe">Add new Recipe</Link>
+            <NavLink
+              to="/new-recipe"
+              style={({ isActive }) =>
+                isActive ? { color: "red" } : { color: "rgb(253, 169, 169)" }
+              }
+            >
+              Add new Recipe
+            </NavLink>
           </li>
           <li>
-            <Link to="/favourites-recipes">Favourites</Link>
+            <NavLink
+              to="/favourites-recipes"
+              style={({ isActive }) =>
+                isActive ? { color: "red" } : { color: "rgb(253, 169, 169)" }
+              }
+            >
+              Favourites
+            </NavLink>
           </li>
         </ul>
       </nav>
