@@ -6,5 +6,9 @@ body {
   font-family: sans-serif;
   margin: 0;
   background-color: #dfdfdf;
-  height: 1500px;
+}
+
+.heart {
+  width: 70px;
+  height: 70px;
 }

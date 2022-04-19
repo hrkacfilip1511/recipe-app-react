@@ -30,7 +30,7 @@ const NewRecipeForm = (props) => {
         </div>
         <div className={classes.forPicture}>
           <label htmlFor="image">Recipe picture: </label>
-          <input ref={picRef} id="image" type="url" alt="img" required />
+          <input ref={picRef} id="image" type="url" alt="img" />
         </div>
         <div className={classes.forIngredients}>
           <label htmlFor="ingredients">Ingredients: </label>
